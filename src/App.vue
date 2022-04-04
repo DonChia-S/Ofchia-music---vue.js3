@@ -1,26 +1,23 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+<template lang="pug">
+#App
+  pm-header
+
+  router-view
+  
+  pm-footer
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import PmHeader from "@/components/layout/Header.vue";
+import PmFooter from "@/components/layout/Footer.vue";
 
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+
+  components: { PmHeader, PmFooter },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "@/scss/main.scss";
 </style>
